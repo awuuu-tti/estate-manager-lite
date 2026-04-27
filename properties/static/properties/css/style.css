@@ -1,0 +1,11 @@
+body { background: #f8fafc; }
+.object-photo { height: 220px; object-fit: cover; }
+.placeholder-photo {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9ecef;
+    color: #6c757d;
+}
+.card { border-radius: 1rem; }

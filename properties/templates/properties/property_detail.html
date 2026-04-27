@@ -1,0 +1,30 @@
+{% extends 'properties/base.html' %}
+{% block content %}
+<a href="{% url 'property_list' %}" class="btn btn-link ps-0">← Назад к каталогу</a>
+<div class="row g-4">
+    <div class="col-lg-7">
+        {% if property.main_photo %}
+            <img src="{{ property.main_photo.url }}" class="img-fluid rounded shadow-sm mb-3" alt="{{ property.title }}">
+        {% endif %}
+        <h1>{{ property.title }}</h1>
+        <p class="text-muted">{{ property.address }}</p>
+        <p><strong>Тип сделки:</strong> {{ property.get_deal_type_display }}</p>
+        <p><strong>Цена:</strong> {{ property.price }} ₽</p>
+        <p><strong>Площадь:</strong> {{ property.area }} м²</p>
+        {% if property.floor %}<p><strong>Этаж:</strong> {{ property.floor }}</p>{% endif %}
+        <p>{{ property.description }}</p>
+    </div>
+    <div class="col-lg-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="h4">Записаться на просмотр</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
