@@ -1,0 +1,28 @@
+name: Lint Check
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  lint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Clone repository
+      uses: actions/checkout@v4
+
+    - name: Install Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install flake8
+      run: |
+        pip install flake8
+
+    - name: Run flake8
+      run: |
+        flake8 .

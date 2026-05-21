@@ -1,3 +1,8 @@
+![Tests](https://github.com/awuuu-tti/estate-manager-lite/actions/workflows/test.yml/badge.svg)
+
+![Lint](https://github.com/awuuu-tti/estate-manager-lit/actions/workflows/lint.yml/badge.svg)
+
+![Deploy](https://github.com/awuuu-tti/estate-manager-lit/actions/workflows/deploy.yml/badge.svg)
 # EstateManager Lite
 
 Учебный Django-проект для лабораторной работы №2: базовый сайт агентства недвижимости.
@@ -12,7 +17,15 @@
 - экспорт заявок в CSV;
 - базовая структура проекта, `.gitignore`, README.
 - Административная панель защищена логином и паролем Django.
+## GitHub Actions
 
+В проекте настроены GitHub Actions для:
+
+- автоматического тестирования;
+- проверки качества кода;
+- автоматической симуляции деплоя.
+
+Workflow автоматически запускаются после отправки изменений в GitHub.
 ## Как запустить
 
 ```bash
@@ -60,17 +73,3 @@ git checkout main
 git merge feature/viewing-requests
 git push origin main
 ```
-## CI/CD с GitHub Actions
-
-В этом проекте настроены следующие автоматические проверки:
-
-| Workflow | Статус |
-|----------|--------|
-| Тесты с покрытием | [![Test](https://github.com/Дарья Майорова/EstateManager/actions/workflows/test.yml/badge.svg)](https://github.com/Дарья Майорова/EstateManager/actions/workflows/test.yml) |
-| Качество кода (линтер) | [![Lint](https://github.com/Дарья Майорова/EаstateManager/actions/workflows/lint.yml/badge.svg)](https://github.com/Дарья Майорова/EstateManager/actions/workflows/lint.yml) |
-| Имитация деплоя | [![Deploy](https://github.com/Дарья Майорова/EstateManager/actions/workflows/deploy.yml/badge.svg)](https://github.com/Дарья Майорова/EstateManager/actions/workflows/deploy.yml) |
-
-**Что они делают:**
-- **Тесты** — запускают `coverage run manage.py test`, требуют покрытия ≥90%
-- **Линтер** — проверяют стиль кода и наличие немигрированных изменений
-- **Деплой** — имитируют развёртывание (миграции + статика)
