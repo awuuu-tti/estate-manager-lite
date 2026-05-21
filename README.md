@@ -66,9 +66,9 @@ git push origin main
 
 | Workflow | Статус |
 |----------|--------|
-| Тесты с покрытием | [![Test](https://github.com/awuuu-tti/EstateManager/actions/workflows/test.yml/badge.svg)](https://github.com/ауууу-тти/EstateManager/actions/workflows/test.yml) |
-| Качество кода (линтер) | [![Lint](https://github.com/ауууу-тти/EаstateManager/actions/workflows/lint.yml/badge.svg)](https://github.com/ауууу-тти/EstateManager/actions/workflows/lint.yml) |
-| Имитация деплоя | [![Deploy](https://github.com/ауууу-тти/EstateManager/actions/workflows/deploy.yml/badge.svg)](https://github.com/ауууу-тти/EstateManager/actions/workflows/deploy.yml) |
+| Тесты с покрытием | [![Test](https://github.com/Дарья Майорова/EstateManager/actions/workflows/test.yml/badge.svg)](https://github.com/Дарья Майорова/EstateManager/actions/workflows/test.yml) |
+| Качество кода (линтер) | [![Lint](https://github.com/Дарья Майорова/EаstateManager/actions/workflows/lint.yml/badge.svg)](https://github.com/Дарья Майорова/EstateManager/actions/workflows/lint.yml) |
+| Имитация деплоя | [![Deploy](https://github.com/Дарья Майорова/EstateManager/actions/workflows/deploy.yml/badge.svg)](https://github.com/Дарья Майорова/EstateManager/actions/workflows/deploy.yml) |
 
 **Что они делают:**
 - **Тесты** — запускают `coverage run manage.py test`, требуют покрытия ≥90%
