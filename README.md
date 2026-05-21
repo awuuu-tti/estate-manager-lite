@@ -60,3 +60,17 @@ git checkout main
 git merge feature/viewing-requests
 git push origin main
 ```
+## CI/CD с GitHub Actions
+
+В этом проекте настроены следующие автоматические проверки:
+
+| Workflow | Статус |
+|----------|--------|
+| Тесты с покрытием | [![Test](https://github.com/awuuu-tti/EstateManager/actions/workflows/test.yml/badge.svg)](https://github.com/ауууу-тти/EstateManager/actions/workflows/test.yml) |
+| Качество кода (линтер) | [![Lint](https://github.com/ауууу-тти/EаstateManager/actions/workflows/lint.yml/badge.svg)](https://github.com/ауууу-тти/EstateManager/actions/workflows/lint.yml) |
+| Имитация деплоя | [![Deploy](https://github.com/ауууу-тти/EstateManager/actions/workflows/deploy.yml/badge.svg)](https://github.com/ауууу-тти/EstateManager/actions/workflows/deploy.yml) |
+
+**Что они делают:**
+- **Тесты** — запускают `coverage run manage.py test`, требуют покрытия ≥90%
+- **Линтер** — проверяют стиль кода и наличие немигрированных изменений
+- **Деплой** — имитируют развёртывание (миграции + статика)

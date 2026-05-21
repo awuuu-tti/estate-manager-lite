@@ -1,0 +1,36 @@
+name: Deploy Simulation
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run migrations (check)
+      run: |
+        python manage.py migrate --noinput
+
+    - name: Collect static files
+      run: |
+        python manage.py collectstatic --noinput
+
+    - name: Deploy notification (simulate)
+      run: |
+        echo "🚀 Deploy simulation completed at $(date)"
+        echo "✅ Project: EstateManager"
+        echo "✅ Migrations OK, Static files collected"
